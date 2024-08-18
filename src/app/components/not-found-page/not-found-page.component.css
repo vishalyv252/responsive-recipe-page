@@ -1,0 +1,4 @@
+.progress-bar {
+  /* Smooth transition effect for the width of the progress bar. */
+  transition: width 0.1s linear;
+}

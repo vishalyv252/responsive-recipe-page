@@ -1,0 +1,96 @@
+<main class="flex justify-center items-center h-screen w-full bg-Eggshell Tablet_Design_View:h-auto Tablet_Design_View:bg-White Large_Mobile_Design_View:h-auto Large_Mobile_Design_View:bg-White Small_Mobile_Design_View:h-auto Small_Mobile_Design_View:bg-White overflow-x-hidden overflow-y-auto">
+  <!-- Main container for the recipe page with full-screen height and custom background. Adapts to various screen sizes with different heights and background colors. -->
+  <div class="flex flex-col justify-center items-center h-auto w-auto m-auto p-24 Tablet_Design_View:m-0 Tablet_Design_View:p-0 Large_Mobile_Design_View:m-0 Large_Mobile_Design_View:p-0 Small_Mobile_Design_View:m-0 Small_Mobile_Design_View:p-0">
+    <!-- Inner container centered with flexible padding and margins, adjusts for different screen sizes. -->
+
+    <!-- Image for Tablet and Mobile views, hidden on Desktop view -->
+    <img [src]="Omlette_Image_Path_Tablet_And_Mobile_View" [alt]="Omlette_Image_Tablet_And_Mobile_View_Description" class="h-auto w-full hidden Tablet_Design_View:block Large_Mobile_Design_View:block Small_Mobile_Design_View:block" />
+
+    <div class="bg-White flex flex-col justify-center items-start h-auto w-[730px] rounded-xl Tablet_Design_View:w-full Tablet_Design_View:rounded-none Large_Mobile_Design_View:w-full Large_Mobile_Design_View:rounded-none Small_Mobile_Design_View:w-full Small_Mobile_Design_View:rounded-none p-10">
+      <!-- Main content container for the recipe details, with a white background, rounded corners on Desktop view, and flexible width for various screen sizes. -->
+
+      <!-- Image for Desktop view, hidden on Tablet and Mobile views -->
+      <img [src]="Omlette_Image_Path_Desktop_View" [alt]="Omlette_Image_Desktop_View_Description" class="h-auto w-full rounded-xl Tablet_Design_View:hidden Large_Mobile_Design_View:hidden Small_Mobile_Design_View:hidden" />
+
+      <!-- Recipe Title, adjusts font size and margin for different screen sizes -->
+      <h1 class="font-Young_Serif text-Dark_Charcoal text-[40px] Tablet_Design_View:text-4xl Large_Mobile_Design_View:text-3xl Small_Mobile_Design_View:text-2xl mt-5 Tablet_Design_View:mt-0 Tablet_Design_View:mb-5 Large_Mobile_Design_View:mt-0 Large_Mobile_Design_View:mb-5 Small_Mobile_Design_View:mt-0 Small_Mobile_Design_View:mb-5">{{title}}</h1>
+
+      <!-- Recipe Description, adjusts font size for different screen sizes -->
+      <p class="font-Outfit text-Wenge_Brown text-base Tablet_Design_View:text-lg Large_Mobile_Design_View:text-base Small_Mobile_Design_View:text-sm font-medium w-full">{{description}}</p>
+
+      <!-- Preparation Time section, with a background color and rounded corners -->
+      <div class="font-Outfit bg-Rose_White w-full px-6 py-4 mt-7 mb-5 rounded-lg">
+        <h6 class="text-Dark_Raspberry font-bold text-lg Small_Mobile_Design_View:text-base mb-3">Preparation time</h6>
+        <ul class="list-disc list-outside text-Wenge_Brown text-base px-5 Small_Mobile_Design_View:pl-4 Small_Mobile_Design_View:text-xs">
+          <!-- List items for preparation details -->
+          <li class="font-medium pl-3 Tablet_Design_View:pl-1 Small_Mobile_Design_View:pl-1"><span class="font-bold">Total:</span> Approximately 10 minutes</li>
+          <li class="font-medium pl-3 Tablet_Design_View:pl-1 Small_Mobile_Design_View:pl-1 my-1"><span class="font-bold">Preparation:</span> 5 minutes</li>
+          <li class="font-medium pl-3 Tablet_Design_View:pl-1 Small_Mobile_Design_View:pl-1"><span class="font-bold">Cooking:</span> 5 minutes</li>
+        </ul>
+      </div>
+
+      <!-- Ingredients section -->
+      <div class="w-full">
+        <h4 class="font-Young_Serif text-Nutmeg text-2xl Small_Mobile_Design_View:text-xl mb-3">Ingredients</h4>
+        <ul class="list-disc font-Outfit text-Wenge_Brown font-medium text-base Small_Mobile_Design_View:text-xs px-5 Small_Mobile_Design_View:pl-4">
+          <!-- List items for ingredients -->
+          <li class="pl-3">2-3 large eggs</li>
+          <li class="pl-3 my-1">Salt, to taste</li>
+          <li class="pl-3">Pepper, to taste</li>
+          <li class="pl-3 my-1">1 tablespoon of butter or oil</li>
+          <li class="pl-3">Optional fillings: cheese, diced vegetables, cooked meats, herbs</li>
+        </ul>
+      </div>
+
+      <!-- Horizontal divider -->
+      <hr class="divide-y divide-Light_Grey w-full mt-5" />
+
+      <!-- Instructions section -->
+      <div class="w-full my-5">
+        <h3 class="font-Young_Serif text-Nutmeg text-2xl Small_Mobile_Design_View:text-xl mb-3">Instructions</h3>
+        <ol class="list-decimal font-Outfit text-Wenge_Brown font-medium text-base Small_Mobile_Design_View:text-xs px-5 Small_Mobile_Design_View:pl-4">
+          <!-- List items for cooking instructions -->
+          <li class="pl-3"><span class="font-bold">Beat the eggs:</span> In a bowl, beat the eggs with a pinch of salt and pepper until they are well mixed. You can add a tablespoon of water or milk for a fluffier texture.</li>
+          <li class="pl-3 my-2"><span class="font-bold">Heat the pan:</span> Place a non-stick frying pan over medium heat and add butter or oil.</li>
+          <li class="pl-3"><span class="font-bold">Cook the omelette:</span> Once the butter is melted and bubbling, pour in the eggs. Tilt the pan to ensure the eggs evenly coat the surface.</li>
+          <li class="pl-3 my-2"><span class="font-bold">Add fillings (optional):</span> When the eggs begin to set at the edges but are still slightly runny in the middle, sprinkle your chosen fillings over one half of the omelette.</li>
+          <li class="pl-3"><span class="font-bold">Fold and serve:</span> As the omelette continues to cook, carefully lift one edge and fold it over the fillings. Let it cook for another minute, then slide it onto a plate.</li>
+          <li class="pl-3 my-2"><span class="font-bold">Enjoy:</span> Serve hot, with additional salt and pepper if needed.</li>
+        </ol>
+      </div>
+
+      <!-- Horizontal divider -->
+      <hr class="divide-y divide-Light_Grey w-full mb-5" />
+
+      <!-- Nutrition section -->
+      <div class="w-full">
+        <h2 class="font-Young_Serif text-Nutmeg text-2xl Small_Mobile_Design_View:text-xl mb-3">Nutrition</h2>
+        <p class="font-Outfit text-Wenge_Brown text-base Tablet_Design_View:text-lg Large_Mobile_Design_View:text-base Small_Mobile_Design_View:text-sm font-medium w-full mb-3">The table below shows nutritional values per serving without the additional fillings.</p>
+
+        <!-- Nutrition table -->
+        <table class="table-fixed w-full font-Outfit text-base Small_Mobile_Design_View:text-xs">
+          <tbody class="divide-y divide-Light_Grey">
+            <!-- Table rows for nutritional information -->
+            <tr class="border-b-1 border-Wenge_Brown">
+              <td class="text-Wenge_Brown font-medium ml-5 px-5 py-3">Calories</td>
+              <td class="text-Nutmeg font-bold px-5 py-3">277kcal</td>
+            </tr>
+            <tr class="border-b-1 border-Wenge_Brown">
+              <td class="text-Wenge_Brown font-medium px-5 py-3">Carbs</td>
+              <td class="text-Nutmeg font-bold px-5 py-3">0g</td>
+            </tr>
+            <tr class="border-b-1 border-Wenge_Brown">
+              <td class="text-Wenge_Brown font-medium px-5 py-3">Protein</td>
+              <td class="text-Nutmeg font-bold px-5 py-3">20g</td>
+            </tr>
+            <tr class="border-b-1 border-Wenge_Brown">
+              <td class="text-Wenge_Brown font-medium px-5 py-3">Fat</td>
+              <td class="text-Nutmeg font-bold px-5 py-3">22g</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+    </div>
+  </div>
+</main>
